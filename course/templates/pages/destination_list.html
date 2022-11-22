@@ -1,0 +1,36 @@
+{% extends 'layouts/public_base.html' %}
+
+{% block description %}
+List of destinations offered by us
+{% endblock %}
+
+{% block keywords %}
+Destinations
+{% endblock %}
+
+{% block title %}
+  {{ place }}
+{% endblock %}
+
+{% block content %}
+<section class="py-5 ">
+    <div class="row py-5" >
+        {% for destination in destinations %}
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="Image place holder">
+        <div class="card-body">
+            <h5 class="card-title">
+                {{ destination.place }}
+            </h5>
+            <p class="card-text">
+                Exmaple text on card
+            </p>
+            <a href="#" class="btn btn-primary">More details</a>
+        </div>
+    </div>
+        {% endfor %}
+        </div>
+</section>
+{% endblock %}
+
+
