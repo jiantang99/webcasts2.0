@@ -1,6 +1,7 @@
 from django.db import models
 
-class DestCommonInfo(models.Model):
+class Destination(models.Model):
+
     place = models.CharField(
         max_length=250,
         blank=True,
@@ -24,13 +25,21 @@ class DestCommonInfo(models.Model):
     )
     slug = models.SlugField(max_length=255, unique=True, blank=False, null=True)
 
-# Create your models here.
-class Destination(models.Model):
+    class Meta:
+        db_table = 'destination'
 
     def __str__(self):
         return self.place
 
-    class Meta:
-        db_table = 'destination'
+
+
+# Create your models here.
+# class Destination(DestCommonInfo):
+#
+#     def __str__(self):
+#         return self.place
+#
+#     class Meta:
+#         db_table = 'destination'
 
 #class CourseClass(models.Model):
