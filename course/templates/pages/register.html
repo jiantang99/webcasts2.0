@@ -14,7 +14,7 @@
       <!-- Register form -->
       <div class="form">
         <form method="post"
-              action="{% url 'main:register' %}"
+              action="{% url 'course:register' %}"
         >
           {% csrf_token %}
           <div class="form-group
@@ -90,7 +90,7 @@
                    value="Register">
           </div>
         </form>
-        <p class="message">Already Registered? <a href="{% url 'main:login' %}">Login
+        <p class="message">Already Registered? <a href="{% url 'course:login' %}">Login
           Now</a></p>
         <p class="message">Your details are Secure and Private to you.<br>
           We do not Spam</p>
